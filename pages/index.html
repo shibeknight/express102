@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>We are in index.html!</h1>
+    <a href="about.html">go to about!</a>
+    <button onclick="fetching()">fetch something!</button>
+    <script>
+      async function fetching() {
+        const result = await fetch('/dogs');
+        const data = await result.json()
+
+        console.log(data);
+      }
+    </script>
+  </body>
+</html>
